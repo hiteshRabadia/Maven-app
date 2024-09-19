@@ -1,0 +1,38 @@
+pipeline(
+  agent any
+  tools{
+    maven 'Maven'
+  }
+
+  stages{
+    stage('Maven Validate Application') {
+      steps{
+        script{
+          bat 'mvn validate'
+        }
+      }
+    }
+    stage('Maven Compile Application') {
+      steps{
+        script{
+          bat 'mvn compile'
+        }
+      }
+    }
+    stage('Maven test Application') {
+      steps{
+        script{
+          bat 'mvn test'
+        }
+      }
+    }
+    stage('Maven package Application') {
+      steps{
+        script{
+          bat 'mvn package'
+        }
+      }
+    }
+  }
+}
+
