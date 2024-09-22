@@ -32,12 +32,14 @@ pipeline{
           bat 'mvn package'
         }
       }
+    }
     stage('Installation In Local') {
       steps{
         script{
           bat 'mvn install'
         }
       }
+    }
     stage('Deployment') {
       steps{
         script{
