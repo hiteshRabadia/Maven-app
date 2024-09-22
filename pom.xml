@@ -27,7 +27,7 @@
     </dependency>
   </dependencies>
 
-  </distributionManagement>
+  <distributionManagement>
     <repository>
       <id>local-repo</id>
       <name>Re1eases Repository</name>
